@@ -23,7 +23,7 @@ Software.
     @include('template.styles')
 </head>
 
-@if (URL::current()!=route('login') && URL::current()!=route('login.locked'))
+{{-- @if (URL::current()!=route('login') && URL::current()!=route('login.locked')) --}}
 <body onload="startTime()">
         <!-- Sidenav -->
     <nav class="sidenav navbar navbar-vertical fixed-left navbar-expand-xs navbar-light bg-white" id="sidenav-main">
@@ -50,20 +50,20 @@ Software.
                     </div>
                 </a>
             </div>
-            @include('template.menu')
+            @include('template.menu2')
         </div>
     </nav>
-    @else
-<body onload="startTime()" class="bg-default">
+    {{-- @else --}}
+{{-- <body onload="startTime()" class="bg-default">
         @include('template.auth.topnavbar')
-    @endif
-        
+    @endif --}}
+
     <!-- Main content -->
     <div class="main-content" id="panel">
-        @if (URL::current()!=route('login') && URL::current()!=route('login.locked'))
+        {{-- @if (URL::current()!=route('login') && URL::current()!=route('login.locked')) --}}
             @include('template.topnavbar')
-        @endif
-        
+        {{-- @endif --}}
+
         @yield('content')
         {{-- spinner --}}
         <div id="overlay">
@@ -71,15 +71,15 @@ Software.
                 <span class="spinner"></span>
             </div>
         </div>
-        @if (URL::current()!=route('login') && URL::current()!=route('login.locked'))
+        {{-- @if (URL::current()!=route('login') && URL::current()!=route('login.locked')) --}}
             <!-- Footer -->
             @include('template.footer')
-        @endif
+        {{-- @endif --}}
     </div>
-    @if (URL::current()==route('login') || URL::current()==route('login.locked'))
+    {{-- @if (URL::current()==route('login') || URL::current()==route('login.locked')) --}}
         @include('template.auth.footer')
-    @endif
-    
+    {{-- @endif --}}
+
     @include('template.scripts')
 </body>
 

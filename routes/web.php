@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomeController@index')->name('dashboard');
+Route::resource('mahasiswa', 'MahasiswaController')->except([
+    'destroy'
+]);

@@ -14,16 +14,16 @@
                     </a>
             </li>
             <li class="nav-item">
-                @if (URL::current()==route('books.index'))
+                @if (URL::current()==route('mahasiswa.index'))
                 <a class="nav-link" href="#">
                     @else
-                    <a class="nav-link" href="{{ route('books.index') }}">
+                    <a class="nav-link" href="{{ route('mahasiswa.index') }}">
                         @endif
                         <i class="ni ni-books text-orange"></i>
-                        <span class="nav-link-text">Books</span>
+                        <span class="nav-link-text">Data Mahasiswa</span>
                     </a>
             </li>
-            <li class="nav-item">
+            {{-- <li class="nav-item">
                 @if (URL::current()==route('publishers.index'))
                 <a class="nav-link" href="#">
                     @else
@@ -52,7 +52,7 @@
                         <i class="ni ni-ui-04 text-gray-dark"></i>
                         <span class="nav-link-text">Borrowing Data</span>
                     </a>
-            </li>
+            </li> --}}
             {{-- <li class="nav-item">
                 @if (URL::current()==route('user.index'))
                 <a class="nav-link" href="#">

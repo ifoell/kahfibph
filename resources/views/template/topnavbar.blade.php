@@ -200,9 +200,9 @@
                 <span class="avatar avatar-sm rounded-circle">
                   <img alt="Image placeholder" src="{{ asset('assets/img/theme/team-5.jpg') }}">
                 </span>
-                <div class="media-body ml-2 d-none d-lg-block">
+                {{-- <div class="media-body ml-2 d-none d-lg-block">
                   <span class="mb-0 text-sm  font-weight-bold">{{ Str::limit(Auth::user()->name, 8) }}</span>
-                </div>
+                </div> --}}
               </div>
             </a>
             <div class="dropdown-menu dropdown-menu-right">
@@ -217,7 +217,7 @@
                 <i class="ni ni-settings-gear-65"></i>
                 <span>Settings</span>
               </a>
-              <a href="{{ route('user.changepwd') }}" class="dropdown-item">
+              {{-- <a href="{{ route('user.changepwd') }}" class="dropdown-item">
                 <i class="ni ni-settings-gear-65"></i>
                 <span>Change Password</span>
               </a>
@@ -228,7 +228,7 @@
               </a>
               <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                 @csrf
-              </form>
+              </form> --}}
             </div>
           </li>
         </ul>
